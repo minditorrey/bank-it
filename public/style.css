@@ -17,7 +17,7 @@ h1 {
 	padding-top: 40px;
 	padding-bottom: 20px;
 	padding-right: 25%;
-	color: white;
+	color: #fca235;
 }
 
 h2 {
@@ -32,7 +32,7 @@ h2 {
 
 .searchIt {
 	background-color: #316996;
-	padding: 20px;
+	padding: 10px;
 	padding-left: 15%;
 	padding-right: 25%;
 	width: 130%;
@@ -67,3 +67,6 @@ h2 {
 	margin-bottom: -5%;
 }
 
+span {
+	font-weight: bold;
+}
