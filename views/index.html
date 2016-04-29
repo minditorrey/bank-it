@@ -9,6 +9,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
   
   <script src="main.js"></script>
+  <script src="services.js"></script>
 </head>
 <body ng-app='myApp' ng-controller="mainController">
 	<div class="container-fluid">
@@ -20,7 +21,7 @@
 				<div class="col-md-4">
 					<div class="form-group">
 						<label>Date</label>
-						<input type="text" class="form-control" placeholder="01/12/2016" ng-model='itemToEdit.date' ng-model=''>
+						<input type="date" class="form-control" placeholder="YYYY-MM-DD" ng-model='itemToEdit.date' ng-model=''>
 					</div>
 					<div class="form-group">
 						<label>Description</label>
@@ -32,7 +33,8 @@
 				<div class="col-md-4">
 					<div class="form-group">
 						<label>Debit</label>
-						<input type="text" class="form-control" placeholder="$0.00" ng-model='itemToEdit.debit'>
+						<input type="range" id="slider1" class="form-control" placeholder="$0.00" ng-model='itemToEdit.debit' min="-2000" max="0" Step ="5", Value ="-100" required="required">
+
 					</div>
 					<div class="form-group">
 						<label>Memo</label>
@@ -71,7 +73,7 @@
 			</thead>
 			<tbody>
 				<tr class="ng-enter-stagger" ng-repeat='item in items | filter: searchFilter | orderBy:sortOrder track by $index'>
-					<td>{{item.date}}</td>
+					<td>{{item.date | date}}</td>
 					<td>{{item.description}}</td>
 					<td>{{item.debit | currency}}</td>
 					<td>{{item.credit | currency}}</td>

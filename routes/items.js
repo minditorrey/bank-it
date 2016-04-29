@@ -18,14 +18,25 @@ router.route('/')
 	})
 	.post((req, res) => {
 
-		Item.create(req.body, err => {
-			console.log('req.body:', req.body);
+		Item.create(req.body, (err, item) => {
 			if(err) {
 				console.log(err)
 				return res.status(400).send(err);
 			}
-			res.send();
-		});
+			res.send(item);
+		})
+	})
+router.route('/:id')
+	.delete((req, res) => {
+
+		Item.remove(req.params.id, function(err, item) {
+			if(err) {
+				return res.status(400).send(err);
+			}
+			console.log('delete item:', item);
+			res.send(item);
+
+		})
 	});
 
 

@@ -1,0 +1,69 @@
+.container-fluid {
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: -5%;
+}
+
+h1 {
+	background-color: #316996;
+	width: 132%;
+	margin-left: -15%;
+	padding-left: 15%;
+	font-size: 86px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	padding-right: 25%;
+	color: white;
+}
+
+h2 {
+	color: #fca235;
+	font-weight: bold;
+}
+
+.add {
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+
+.searchIt {
+	background-color: #316996;
+	padding: 20px;
+	padding-left: 15%;
+	padding-right: 25%;
+	width: 130%;
+	margin-left: -15%;
+	color: white;
+	font-size: 18px;
+}
+
+.searchBox {
+	margin-bottom: 3%;
+}
+
+.totals {
+	background-color: #316996;
+	padding: 20px;
+	padding-left: 15%;
+	padding-right: 25%;
+	width: 130%;
+	color: white;
+	font-size: 18px;
+	color: #fca235;;	
+}
+
+#bottom {
+	background-color: #316996;
+	margin-left: -15%;
+	margin-top: 25px;
+	padding: 25px;
+	padding-left: 15%;
+	padding-right: 25%;
+	width: 132%;
+	margin-bottom: -5%;
+}
+

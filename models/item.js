@@ -19,6 +19,7 @@ exports.create = function(item, cb) {
 	if(!item.description) {
 		return cb('Missing required field.')
 	}
+
 	
 	db.run('INSERT INTO items (date, description, debit, credit) VALUES (?, ?, ?, ?)',
 	item.date, 
@@ -28,4 +29,10 @@ exports.create = function(item, cb) {
 	cb);
 
 };
+
+exports.remove = function(id, cb) {
+	console.log('id:', id);
+	db.run(`DELETE FROM items WHERE id = ?`, id, cb);
+
+}
 
