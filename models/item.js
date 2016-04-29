@@ -6,8 +6,8 @@ db.run(`CREATE TABLE IF NOT EXISTS items (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	date DATETIME,
 	description TEXT,
-	debits INTEGER,
-	credits INTEGER
+	debit INTEGER,
+	credit INTEGER
 	)`);
 
 exports.get = function(cb){
@@ -15,16 +15,16 @@ exports.get = function(cb){
 };
 
 exports.create = function(item, cb) {
-
-	if(!item.date || !item.description) {
+	console.log(item)
+	if(!item.description) {
 		return cb('Missing required field.')
 	}
 	
-	db.run('INSERT INTO items (date, description, debits, credits) VALUES (?, ?, ?, ?)',
+	db.run('INSERT INTO items (date, description, debit, credit) VALUES (?, ?, ?, ?)',
 	item.date, 
 	item.description, 
-	item.debits, 
-	item.credits, 
+	item.debit, 
+	item.credit, 
 	cb);
 
 };

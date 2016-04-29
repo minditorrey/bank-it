@@ -17,8 +17,11 @@ router.route('/')
 		});
 	})
 	.post((req, res) => {
+
 		Item.create(req.body, err => {
+			console.log('req.body:', req.body);
 			if(err) {
+				console.log(err)
 				return res.status(400).send(err);
 			}
 			res.send();
