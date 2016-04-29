@@ -4,7 +4,7 @@ var app = angular.module('myApp', []);
 
 
 app.controller('mainController', function($scope, Item) {
-	// var init = function() {
+	
 	Item.getAll()
   	.then(res => {
     	$scope.items = res.data;
@@ -13,14 +13,13 @@ app.controller('mainController', function($scope, Item) {
     .catch(err => {
     	console.log('err:', err);
     });
-	// }
+	
 
 	$scope.addItem = () => {
-		
 		Item.create($scope.itemToEdit)
 		.then(res => {
-			// init();
-			$scope.itemToEdit = null;	
+			$scope.itemToEdit = null;
+			location.reload();
 		})
 		.catch(err => {
       	console.error(err);
