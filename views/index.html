@@ -20,7 +20,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-						<label>Date</label>
+						<label class="select">Select Date <span class="glyphicon glyphicon-circle-arrow-down"></label>
 						<input type="date" class="form-control" placeholder="YYYY-MM-DD" ng-model='itemToEdit.date' ng-model=''>
 					</div>
 					<div class="form-group">
@@ -32,8 +32,8 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-						<label>Debit</label>
-						<span>$ -</span><input type="number" ng-model='itemToEdit.debit'
+						<label class="select">Select Debit Amount <span class="glyphicon glyphicon-circle-arrow-down"></label>
+						<input type="number" ng-model='itemToEdit.debit'
 						class="form-control" min="-1000" step="5" max="0" placeholder="-100"/>
 
 					</div>
@@ -46,8 +46,8 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-					<label>Credit</label>
-					<span>$ +</span><input class="form-control" ng-model='itemToEdit.credit' type="number" min="0" step="5" max="2000" placeholder="100"/>
+					<label class ="select">Select Credit Amount <span class="glyphicon glyphicon-circle-arrow-down"></span></label>
+					<input class="form-control" ng-model='itemToEdit.credit' type="number" min="0" step="5" max="2000" placeholder="100"/>
 					</div>
 				</div>
 			</div>	
